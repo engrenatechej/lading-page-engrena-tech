@@ -192,7 +192,7 @@ h3 { margin-bottom: 8px; font-size: 1.15rem; }
   .section, .page-hero { padding-block: 44px; }
   .section-heading { align-items: flex-start; flex-direction: column; }
   .card-grid.two, .card-grid.three, .card-grid.four { grid-template-columns: 1fr; }
-  .content-card { min-height: auto; }
+  .content-card { min-height: auto;  }
   .case { grid-template-columns: 1fr; }
   .case-side, .case-body { padding: 21px; }
   .cta-inner { align-items: flex-start; flex-direction: column; }
@@ -204,4 +204,66 @@ h3 { margin-bottom: 8px; font-size: 1.15rem; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition-duration: .01ms !important; }
+}
+
+:root {
+  --blue: #245b78;
+  --blue-dark: #183c52;
+}
+
+.button-blue { color: #fff; background: var(--blue); border-color: var(--blue); }
+.button-blue:hover { color: #fff; background: var(--blue-dark); border-color: var(--blue-dark); }
+.section-rule { display: block; width: 44px; height: 3px; margin-bottom: 18px; background: var(--blue); }
+.hero-editorial { padding-block: 54px 62px; background: #f6f8f9; }
+.hero-editorial-grid { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(320px, .95fr); align-items: center; gap: 54px; }
+.hero-editorial .hero-copy { padding-block: 20px; }
+.hero-editorial .hero-copy h1 { max-width: 640px; }
+.editorial-photo { position: relative; overflow: hidden; margin: 0; background: #e8edef; }
+.editorial-photo img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.editorial-photo figcaption, .photo-label { position: absolute; right: 0; bottom: 0; left: 0; padding: 11px 15px; color: #fff; background: rgb(24 60 82 / 84%); font: 10px var(--mono); }
+.hero-photo { aspect-ratio: 1.42; }
+.hero-photo img { object-position: center 48%; }
+.story-section, .facility-section { padding-block: 74px; }
+.story-grid, .facility-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: center; gap: 62px; }
+.story-copy h2, .facility-copy h2 { max-width: 530px; }
+.story-copy > p:not(.eyebrow), .facility-copy > p:not(.eyebrow) { font-size: 14px; }
+.story-copy .text-link { margin-top: 10px; }
+.story-photo { aspect-ratio: 1.3; }
+.story-photo img { object-position: center; }
+.media-section { padding-block: 70px; }
+.media-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.media-card { display: flex; min-width: 0; flex-direction: column; color: var(--ink); background: #fff; border: 1px solid var(--line); transition: transform .2s ease, box-shadow .2s ease; }
+.media-card:hover { color: var(--ink); transform: translateY(-3px); box-shadow: 0 10px 24px rgb(23 33 43 / 9%); }
+.media-card > img { display: block; width: 100%; aspect-ratio: 1.5; object-fit: cover; }
+.media-card-copy { display: flex; flex: 1; flex-direction: column; align-items: flex-start; padding: 19px; }
+.media-card-copy h3, .media-card-text h3 { margin-bottom: 20px; font-size: 18px; }
+.media-card-copy .text-link, .media-card-text .text-link { margin-top: auto; }
+.media-card-text { justify-content: flex-end; min-height: 100%; padding: 25px; color: #fff; background: var(--blue-dark); border-color: var(--blue-dark); }
+.media-card-text:hover { color: #fff; }
+.media-card-text .card-index { color: #f5a477; }
+.media-card-text .text-link { color: #fff; }
+.facility-section { background: #fff; }
+.facility-photo { aspect-ratio: 1.34; }
+.facility-photo img { object-position: center 54%; }
+.facility-copy .check-list { margin-block: 20px; }
+.about-page-hero { padding-block: 54px; background: #f6f8f9; }
+.about-page-hero .about-hero { grid-template-columns: minmax(0, 1.1fr) minmax(320px, .9fr); }
+.about-page-hero .about-hero h1 { font-size: clamp(2.35rem, 4.5vw, 3.65rem); }
+.about-hero-photo { aspect-ratio: 1.42; }
+
+@media (max-width: 900px) {
+  .hero-editorial-grid, .about-page-hero .about-hero, .story-grid, .facility-grid { gap: 32px; }
+  .media-grid { gap: 14px; }
+  .media-card-copy { padding: 15px; }
+}
+
+@media (max-width: 680px) {
+  .hero-editorial-grid, .about-page-hero .about-hero, .story-grid, .facility-grid { grid-template-columns: 1fr; }
+  .hero-editorial { padding-block: 40px; }
+  .hero-photo, .about-hero-photo { aspect-ratio: 1.35; }
+  .story-section, .facility-section, .media-section { padding-block: 48px; }
+  .story-grid, .facility-grid { gap: 25px; }
+  .story-photo { order: -1; }
+  .media-grid { grid-template-columns: 1fr; }
+  .media-card-text { min-height: 210px; }
 }
