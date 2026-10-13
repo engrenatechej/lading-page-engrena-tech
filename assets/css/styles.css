@@ -1104,3 +1104,29 @@ h3 {
     min-height: 210px;
   }
 }
+/* Container do carrossel dentro do cartão */
+.case-carrossel {
+    position: relative;
+    width: 100%;
+    height: 200px; /* Ajuste a altura conforme preferir */
+    overflow: hidden;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    background-color: #0b0f19;
+}
+
+/* Imagens sobrepostas com transição suave */
+.carrossel-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.carrossel-img.ativa {
+    opacity: 1;
+}   

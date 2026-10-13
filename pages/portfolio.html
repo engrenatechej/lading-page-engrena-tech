@@ -9,19 +9,10 @@
     />
     <title>Portfólio | Engrenatech</title>
     <link rel="stylesheet" href="../assets/css/styles.css" />
+    <!-- 1. Importando o cliente do Supabase via CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   </head>
   <body>
-    <div class="notice">
-      <div class="wrap notice-inner">
-        <span
-          ><i class="status-dot"></i> Chancela universitária · Supervisão
-          docente</span
-        ><span class="notice-detail"
-          >CREA-SP Filiada <b>·</b> Sem fins lucrativos <b>·</b> Retorno em até
-          24h</span
-        >
-      </div>
-    </div>
     <header class="site-header">
       <div class="wrap header-inner">
         <a class="brand" href="../index.html"
@@ -61,136 +52,14 @@
           </div>
         </div>
       </section>
+
+      <!-- Seção onde os projetos do Supabase serão injetados dinamicamente -->
       <section class="section section-muted">
-        <div class="wrap case-list">
-          <article class="case">
-            <div class="case-side">
-              <span class="card-index">#ENG-AUT-01 · AUTOMAÇÃO INDUSTRIAL</span>
-              <h2>Automatização de linha de envase e triagem</h2>
-              <p>Cliente: Indústria de bebidas e envase</p>
-              <div class="case-metrics">
-                <div><b>+210%</b><span>Volume produtivo</span></div>
-                <div><b>0,4%</b><span>Perda residual</span></div>
-                <div><b>4,2 meses</b><span>Payback</span></div>
-              </div>
-              <p class="tags">
-                CLP Rockwell · Balança integrada · IHM touch · NR-12
-              </p>
-            </div>
-            <div class="case-body">
-              <h3>Desafio</h3>
-              <p>
-                Envase manual com perda de 12% por derramamento e limite de 300
-                garrafas por hora.
-              </p>
-              <h3>Solução</h3>
-              <p>
-                Esteira em inox 304 com célula de carga, sensores ópticos e
-                controle via CLP Rockwell com IHM de 7 polegadas.
-              </p>
-              <h3>Resultado</h3>
-              <p>
-                Volume de produção contínua ampliado, perdas reduzidas a 0,4% e
-                payback em 4,2 meses.
-              </p>
-            </div>
-          </article>
-          <article class="case">
-            <div class="case-side">
-              <span class="card-index">#ENG-MEC-02 · ENGENHARIA MECÂNICA</span>
-              <h2>Bancada de teste hidráulico para autopeças</h2>
-              <p>Cliente: Fornecedor de autopeças Tier-2</p>
-              <div class="case-metrics">
-                <div><b>-55%</b><span>Custo vs. importado</span></div>
-                <div><b>100%</b><span>Homologado</span></div>
-                <div><b>350 bar</b><span>Pressão de teste</span></div>
-              </div>
-              <p class="tags">
-                Bomba alta pressão · Circuito fechado · DAQ · Simulação FEA
-              </p>
-            </div>
-            <div class="case-body">
-              <h3>Desafio</h3>
-              <p>
-                Risco de multas por terceirização de ensaios de pressão cíclica
-                exigidos pela montadora.
-              </p>
-              <h3>Solução</h3>
-              <p>
-                Bancada própria com bomba pneumohidráulica, circuito fechado e
-                aquisição de dados calibrada.
-              </p>
-              <h3>Resultado</h3>
-              <p>
-                Homologação formal na montadora com custo de fabricação 55%
-                menor que o maquinário importado.
-              </p>
-            </div>
-          </article>
-          <article class="case">
-            <div class="case-side">
-              <span class="card-index">#ENG-IOT-03 · SISTEMAS EMBARCADOS</span>
-              <h2>Monitoramento IoT de motores industriais</h2>
-              <p>Cliente: Manutenção preditiva industrial</p>
-              <div class="case-metrics">
-                <div><b>Zero</b><span>Paradas em 8 meses</span></div>
-                <div><b>MQTT</b><span>Telemetria em tempo real</span></div>
-                <div><b>RMS</b><span>Cálculo embarcado</span></div>
-              </div>
-              <p class="tags">Acelerômetro MEMS · MQTT · Termopar · IP66</p>
-            </div>
-            <div class="case-body">
-              <h3>Desafio</h3>
-              <p>
-                Paradas não programadas por superaquecimento de rolamentos em
-                exaustores de alta rotação.
-              </p>
-              <h3>Solução</h3>
-              <p>
-                Placa dedicada com acelerômetro MEMS triaxial, medição térmica e
-                transmissão de dados via MQTT.
-              </p>
-              <h3>Resultado</h3>
-              <p>
-                Zero quebras em oito meses de monitoramento contínuo e alertas
-                antecipados de desbalanceamento.
-              </p>
-            </div>
-          </article>
-          <article class="case">
-            <div class="case-side">
-              <span class="card-index">#ENG-PRT-04 · PROTOTIPAGEM</span>
-              <h2>Dispensador micrométrico para startup médica</h2>
-              <p>Cliente: Startup do setor biomédico</p>
-              <div class="case-metrics">
-                <div><b>R$ 450k</b><span>Captação aprovada</span></div>
-                <div><b>6 sem.</b><span>Ciclo de entrega</span></div>
-                <div><b>±0,02 ml</b><span>Precisão linear</span></div>
-              </div>
-              <p class="tags">
-                Fuso de esferas · Motor micropasso · Impressão 3D
-              </p>
-            </div>
-            <div class="case-body">
-              <h3>Desafio</h3>
-              <p>
-                Necessidade de protótipo físico em escala real para validação
-                técnica com comitê de fundos.
-              </p>
-              <h3>Solução</h3>
-              <p>
-                Mecanismo com fuso de esferas, motor de passo em micropasso e
-                carcaça por manufatura aditiva técnica.
-              </p>
-              <h3>Resultado</h3>
-              <p>
-                Aporte de R$ 450.000 assegurado após validação experimental de
-                bancada entregue em seis semanas.
-              </p>
-            </div>
-          </article>
+        <div class="wrap case-list" id="case-list-container">
+          <!-- Os cartões vindos do Supabase vão aparecer aqui via JS -->
         </div>
       </section>
+
       <section class="metrics">
         <div class="wrap metric-grid">
           <div>
@@ -255,5 +124,8 @@
         ><span>Projetos sob acordo de confidencialidade.</span>
       </div>
     </footer>
+
+    <!-- 2. Arquivo JavaScript que fará a integração -->
+    <script src="../assets/js/portfolio.js"></script>
   </body>
 </html>
