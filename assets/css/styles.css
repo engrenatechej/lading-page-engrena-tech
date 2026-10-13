@@ -645,7 +645,7 @@ h3 {
 }
 .footer-grid {
   display: grid;
-  grid-template-columns: 1.5fr 0.7fr 0.9fr;
+  grid-template-columns: 1.5fr 0.7fr 0.9fr 1.2fr;
   gap: 48px;
   padding-bottom: 30px;
 }
@@ -689,6 +689,16 @@ h3 {
   border-top: 1px solid #303a43;
   color: #95a1aa;
   font: 10px var(--mono);
+}
+#instagram {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+}
+#instagram i {
+    font-size: 14px;
 }
 .contact-grid {
   display: grid;
@@ -1130,3 +1140,33 @@ h3 {
 .carrossel-img.ativa {
     opacity: 1;
 }   
+
+.mvv-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 20px;
+}
+
+.mvv-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    padding: 8px;
+    border: 2px solid var(--orange);
+    border-radius: 6px;
+}
+
+.mvv-type {
+    color: var(--orange-dark);
+    font-weight: 600;
+    flex: 0 0 80px;
+    text-align: center;
+}
+
+.mvv-card p {
+    flex: 1;
+    margin: 0;
+}
