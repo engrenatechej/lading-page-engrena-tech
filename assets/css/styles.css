@@ -650,6 +650,11 @@ h3 {
   gap: 48px;
   padding-bottom: 30px;
 }
+#logo-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .brand-footer strong {
   color: #fff;
 }
@@ -691,14 +696,8 @@ h3 {
   color: #95a1aa;
   font: 10px var(--mono);
 }
-#instagram {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 6px;
-}
-#instagram i {
+
+.icon {
     font-size: 14px;
 }
 .contact-grid {
