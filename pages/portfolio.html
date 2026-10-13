@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Estudos de caso de engenharia mecatrônica, automação industrial, mecânica e IoT."
+    />
+    <title>Portfólio | Engrenatech</title>
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+    <!-- 1. Importando o cliente do Supabase via CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="wrap header-inner">
+        <a class="brand" href="../index.html"
+          ><span class="brand-mark">ET</span
+          ><span
+            ><strong>ENGRENATECH</strong
+            ><small>Engenharia Mecatrônica</small></span
+          ></a
+        >
+        <nav class="main-nav" aria-label="Navegação principal">
+          <a href="../index.html">Início</a><a href="solucoes.html">Soluções</a
+          ><a href="sobre.html">Sobre nós</a
+          ><a class="active" href="portfolio.html" aria-current="page"
+            >Portfólio</a
+          >
+        </nav>
+        <a class="button button-small" href="contato.html"
+          >Solicitar orçamento <span aria-hidden="true">→</span></a
+        >
+      </div>
+    </header>
+    <main>
+      <section class="page-hero">
+        <div class="wrap">
+          <p class="eyebrow">Resultados auditados · Chão de fábrica</p>
+          <h1>Estudos de caso com métricas de engenharia</h1>
+          <p class="lead">
+            Diagnóstico de falha, projeto executivo e resultados operacionais em
+            demandas industriais.
+          </p>
+          <div class="inline-note">
+            <strong>Protocolo de validação</strong
+            ><span
+              >Projetos acompanhados por docentes e orientados às normas
+              técnicas aplicáveis.</span
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- Seção onde os projetos do Supabase serão injetados dinamicamente -->
+      <section class="section section-muted">
+        <div class="wrap case-list" id="case-list-container">
+          <!-- Os cartões vindos do Supabase vão aparecer aqui via JS -->
+        </div>
+      </section>
+
+      <section class="metrics">
+        <div class="wrap metric-grid">
+          <div>
+            <strong>+R$ 1,8M</strong><b>Economia direta</b
+            ><span>Em CAPEX operacional</span>
+          </div>
+          <div>
+            <strong>100%</strong><b>Compromisso de prazo</b
+            ><span>Projetos no cronograma</span>
+          </div>
+          <div>
+            <strong>5,4 meses</strong><b>Retorno médio</b
+            ><span>Amortização do investimento</span>
+          </div>
+          <div>
+            <strong>+25</strong><b>Professores</b
+            ><span>Consultores e avaliadores</span>
+          </div>
+        </div>
+      </section>
+      <section class="cta-band">
+        <div class="wrap cta-inner">
+          <div>
+            <p class="eyebrow">Seu projeto pode ser o próximo</p>
+            <h2>Quer avaliar uma demanda da sua empresa?</h2>
+            <p>Converse com a equipe para uma avaliação técnica preliminar.</p>
+          </div>
+          <a class="button" href="contato.html"
+            >Fale com a equipe <span aria-hidden="true">→</span></a
+          >
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="wrap footer-grid">
+        <div>
+          <a class="brand brand-footer" href="../index.html"
+            ><span class="brand-mark">ET</span
+            ><span
+              ><strong>ENGRENATECH</strong
+              ><small>Engenharia Mecatrônica</small></span
+            ></a
+          >
+          <p>
+            Engenharia mecatrônica aplicada à indústria, com supervisão docente.
+          </p>
+        </div>
+        <div>
+          <h2>Explorar</h2>
+          <a href="../index.html">Início</a><a href="solucoes.html">Soluções</a
+          ><a href="sobre.html">Sobre nós</a><a href="contato.html">Contato</a>
+        </div>
+        <div>
+          <h2>Canal comercial</h2>
+          <a href="mailto:comercial@engrenatech.com.br"
+            >comercial@engrenatech.com.br</a
+          ><a href="https://wa.me/5519998765432">+55 (19) 99876-5432</a>
+        </div>
+      </div>
+      <div class="wrap footer-bottom">
+        <span>© 2026 Engrenatech Consultoria em Mecatrônica.</span
+        ><span>Projetos sob acordo de confidencialidade.</span>
+      </div>
+    </footer>
+
+    <!-- 2. Arquivo JavaScript que fará a integração -->
+    <script src="../assets/js/portfolio.js"></script>
+  </body>
+</html>
