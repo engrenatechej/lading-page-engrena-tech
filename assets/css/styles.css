@@ -8,6 +8,7 @@
   --paper: #ffffff;
   --wash: #f3f5f6;
   --dark: #17212b;
+  --light-orange: #f76b2f;
   --orange: #c94f16;
   --orange-dark: #a93d0d;
   --green: #22835c;
@@ -190,6 +191,7 @@ h3 {
   color: #fff;
   background: var(--orange-dark);
   border-color: var(--orange-dark);
+  scale:1.01;
 }
 .button-small {
   min-height: 38px;
@@ -222,7 +224,7 @@ h3 {
 .eyebrow {
   margin-bottom: 14px;
   color: var(--orange);
-  font: 600 11px var(--mono);
+  font: 600 16px var(--mono);
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
@@ -380,7 +382,7 @@ h3 {
   align-items: center;
   gap: 8px;
   color: var(--orange);
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 700;
 }
 .text-link:hover {
@@ -422,7 +424,7 @@ h3 {
   display: block;
   margin-bottom: 14px;
   color: var(--orange);
-  font: 600 10px var(--mono);
+  font: 600 16px var(--mono);
   letter-spacing: 0.03em;
 }
 .content-card h3,
@@ -901,7 +903,10 @@ h3 {
   width: 44px;
   height: 3px;
   margin-bottom: 18px;
-  background: var(--blue);
+  background: var(--dark);
+}
+.dark .section-rule {
+  background:var(--paper);
 }
 .hero-editorial {
   padding-block: 54px 62px;
@@ -924,6 +929,7 @@ h3 {
   overflow: hidden;
   margin: 0;
   background: #e8edef;
+  scale:1.1;
 }
 .editorial-photo img {
   display: block;
@@ -1035,7 +1041,7 @@ h3 {
   padding: 25px;
   color: #fff;
   background: var(--blue-dark);
-  border-color: var(--blue-dark);
+  border-color: var(--muted);
 }
 .media-card-text:hover {
   color: #fff;
@@ -1192,3 +1198,32 @@ h3 {
   letter-spacing: 0;
   color: var(--orange);
   font-style: normal;}
+.dark {
+  background-color: var(--dark);
+  color:var(--paper);
+}
+.dark .eyebrow, .dark .text-link{
+  color: var(--light-orange);
+}
+.dark .media-card {
+  background-color: transparent;
+  color:var(--paper)
+}
+.dark span {
+  color:var(blue);
+}
+.dark .media-card img {
+  border: 1px solid var(--paper);
+}
+.dark span.card-index, .dark span.text-link{
+  color:var(--light-orange);
+}
+
+.text-link .icon {
+  display:inline-block;
+  transition: transform 0.3s ease;
+}
+
+.text-link:hover .icon {
+    transform: translateX(4px);
+}
