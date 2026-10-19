@@ -1,14 +1,14 @@
+function transitionText() {
+  const titulo = document.getElementById("hero-title");
+  const texto = document.getElementById("hero-text");
 
-const titulo = document.getElementById("hero-title");
-const texto = document.getElementById("hero-text")
-
-const titulo_lista = [
+  const titulo_lista = [
     "Transforme o seu negócio com <em>soluções inteligentes</em>",
     "Automatizar é transformar <em>esforço</em> em <em>eficiência</em>",
     "O seu <em>tempo é dinheiro</em>, e nós somos o seu investimento",
-];
+  ];
 
-const texto_lista = [
+  const texto_lista = [
     `<strong>As suas ideias têm potencial para transformar o seu negócio</strong>. Nós
     transformamos tecnologia em <strong>soluções inteligentes</strong> para tirar projetos do papel,
     conectar sistemas, criar novas oportunidades de crescimento e facilitar o seu
@@ -26,20 +26,50 @@ const texto_lista = [
     <br>
     <br>
     Solicite um orçamento e descubra o que <strong>podemos automatizar por você</strong>.`,
-];
+  ];
 
-let indice = 0;
+  let indice = 0;
 
-setInterval(() => {
+  setInterval(() => {
     titulo.classList.add("fade-out");
     texto.classList.add("fade-out");
 
     setTimeout(() => {
-        indice = (indice + 1) % titulo_lista.length;
-        titulo.innerHTML = titulo_lista[indice];
-        texto.innerHTML = texto_lista[indice];
-        titulo.classList.remove("fade-out");
-        texto.classList.remove("fade-out");
+      indice = (indice + 1) % titulo_lista.length;
+      titulo.innerHTML = titulo_lista[indice];
+      texto.innerHTML = texto_lista[indice];
+      titulo.classList.remove("fade-out");
+      texto.classList.remove("fade-out");
     }, 600);
+  }, 8000);
+}
 
-}, 8000);
+transitionText();
+
+function transitionRules() {
+  // Seleciona todos os elementos
+  const rules = document.querySelectorAll(".group-section-rule span");
+
+  let current = 0;
+
+  function updateRule() {
+    // Remove o laranja de todos os elementos
+    rules.forEach((rule) => {
+      rule.classList.remove("active");
+    });
+
+    // Ativa o elemento atual
+    rules[current].classList.add("active");
+
+    // Avança para o próximo elemento
+    current = (current + 1) % rules.length;
+  }
+
+  // Executa imediatamente
+  updateRule();
+
+  // Repete a cada 8 segundos
+  setInterval(updateRule, 8000);
+}
+
+transitionRules();
