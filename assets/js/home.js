@@ -3,7 +3,7 @@ const titulo = document.getElementById("hero-title");
 const texto = document.getElementById("hero-text")
 
 const titulo_lista = [
-    "O futuro pertence a quem transforma ideias em <em>soluções inteligentes</em>",
+    "Transforme o seu negócio com <em>soluções inteligentes</em>",
     "Automatizar é transformar <em>esforço</em> em <em>eficiência</em>",
     "O seu <em>tempo é dinheiro</em>, e nós somos o seu investimento",
 ];
@@ -14,13 +14,16 @@ const texto_lista = [
     conectar sistemas, criar novas oportunidades de crescimento e facilitar o seu
     processo. 
     <br>
+    <br>
     Solicite um orçamento e descubra como <strong>podemos transformar sua ideia em realidade</strong>.`,
     `<strong>O seu esforço merece gerar resultados</strong>. Nós transformamos tecnologia em otimização para 
     simplificar tarefas, integrar sistemas e aproveitar melhor o seu tempo e recursos.
     <br>
+    <br>
     Solicite um orçamento e descubra como <strong>podemos tornar sua rotina mais produtiva</strong>.`,
     `<strong>O seu tempo vale dinheiro</strong>. Nós transformamos tecnologia em eficiência para você reduzir 
     tarefas manuais, otimizar recursos e focar no que realmente impulsiona o seu negócio.
+    <br>
     <br>
     Solicite um orçamento e descubra o que <strong>podemos automatizar por você</strong>.`,
 ];
